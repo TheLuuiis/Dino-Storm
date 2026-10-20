@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Rye&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+:root {
+    --textWhite: #FBF3DF;
+    --textCoffe: rgb(59, 35, 20);
+    --textYellow: #F2B01E;
+    --textBlack: #1E1410;
+    --textTitleCoffe: #B3341E;
+    --text: #5A3F2B;
+    --textTitleDino: #3B2314;
+    --textArma: #E9D8B4;
+    --backgroundOrange: #E8730C;
+    --background: linear-gradient(rgb(59, 35, 20) 0%, rgb(43, 26, 16) 100%);
+    --fontFamilyRye: "Rye", serif;
+    --fontFamily: "Manrope", system-ui, sans-serif;
+}
