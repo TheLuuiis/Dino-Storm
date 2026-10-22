@@ -13,6 +13,21 @@
     --backgroundYellow: rgb(243, 227, 192);
     --backgroundOrange: #E8730C;
     --background: linear-gradient(rgb(59, 35, 20) 0%, rgb(43, 26, 16) 100%);
-    --fontFamilyRye: "Rye", serif;
-    --fontFamily: "Manrope", system-ui, sans-serif;
+    --fontFamilyRye: "Rye", Impact, serif;
+    --fontFamilyManrope: "Manrope", system-ui, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f2f2f2;
+}
+
+.app {
+    width: 100%;
+    min-height: 100vh;
 }
