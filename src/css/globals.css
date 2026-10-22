@@ -4,12 +4,13 @@
 :root {
     --textWhite: #FBF3DF;
     --textCoffe: rgb(59, 35, 20);
+    --backgroundCoffe: rgb(59, 35, 20);
     --textYellow: #F2B01E;
     --textBlack: #1E1410;
     --textTitleCoffe: #B3341E;
     --text: #5A3F2B;
     --textTitleDino: #3B2314;
-    --textArma: #E9D8B4;
+    --textFur: #E9D8B4;
     --backgroundYellow: rgb(243, 227, 192);
     --backgroundOrange: #E8730C;
     --background: linear-gradient(rgb(59, 35, 20) 0%, rgb(43, 26, 16) 100%);
@@ -29,5 +30,11 @@ body {
 
 .app {
     width: 100%;
-    min-height: 100vh;
+    min-height: 500vh;
+}
+
+.container__main {
+    width: 100%;
+    min-height: 500vh;
+    background-color: var(--backgroundCoffe);
 }

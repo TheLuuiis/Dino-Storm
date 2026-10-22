@@ -5,8 +5,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid black;
-    background: var(--background);
+    background-color: var(--backgroundCoffe);
 }
 
 .container__header {
@@ -15,7 +14,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid white;
 }
 
 .logo__header {
@@ -25,7 +23,6 @@ header {
     display: flex;
     justify-content: start;
     align-items: center;
-    border: 1px solid black;
 }
 
 .logo__header a {
