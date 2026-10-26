@@ -1,17 +1,30 @@
 import './css/globals.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
-import Welcome from './components/Welcome';
+import Home from './pages/Home';
+import Dinosaurios from './pages/Dinosaurios';
+import Armas from './pages/Armas';
+import Implantes from './pages/Implantes';
+import Tecnologias from './pages/Tecnologias';
 
 
 function App() {
 
   return (
-    <div className="app">
-      <Header />
-      <main className='container__main'>
-        <Welcome />
-      </main>
-    </div>
+    <BrowserRouter>
+      <div className="app">
+        <Header />
+        <main className="app-content">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/dinosaurios" element={<Dinosaurios />} />
+            <Route path="/armas" element={<Armas />} />
+            <Route path="/implantes" element={<Implantes />} />
+            <Route path="/tecnologias" element={<Tecnologias />} />
+          </Routes>
+        </main>
+      </div>
+    </BrowserRouter>
   )
 }
 

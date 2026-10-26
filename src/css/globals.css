@@ -2,20 +2,78 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 
 :root {
-    --textWhite: #FBF3DF;
-    --textCoffe: rgb(59, 35, 20);
-    --backgroundCoffe: rgb(59, 35, 20);
-    --textYellow: #F2B01E;
-    --textBlack: #1E1410;
-    --textTitleCoffe: #B3341E;
-    --text: #5A3F2B;
-    --textTitleDino: #3B2314;
-    --textFur: #E9D8B4;
-    --backgroundYellow: rgb(243, 227, 192);
-    --backgroundOrange: #E8730C;
-    --background: linear-gradient(rgb(59, 35, 20) 0%, rgb(43, 26, 16) 100%);
     --fontFamilyRye: "Rye", Impact, serif;
     --fontFamilyManrope: "Manrope", system-ui, sans-serif;
+
+    /* ========================================================
+        1. PALETA DE FONDOS Y BASES (Tonos Arena / Desierto)
+        ======================================================== */
+    --bg-primary: #F4E8D7;               /* Fondo general principal (arena cálido) */
+    --bg-secondary: #E9DAC4;             /* Fondos secundarios de tarjetas y tracks */
+    --bg-navbar: #FBF6EE;                /* Fondo base de la barra de navegación superior */
+    --bg-silhouette: #DFCDB4;            /* Tono para las siluetas prehistóricas inferiores */
+
+    /* ========================================================
+        2. TIPOGRAFÍA Y TEXTOS
+        ======================================================== */
+    --text-title: #2B1810;               /* Marrón oscuro profundo para encabezados */
+    --text-subtitle: #B35C37;            /* Terracota medio para el prefijo "LISTA DE DINOS" */
+    --text-body: #4A3528;                /* Marrón suave para párrafos y descripciones */
+    --text-light: #FBF6EE;               /* Texto claro para botones y chips oscuros */
+    --text-muted: #8C7362;               /* Texto atenuado para porcentajes y etiquetas secundarias */
+
+    /* ========================================================
+        3. COLORES DE ACCIÓN Y ESTADOS (Botones e Indicadores)
+        ======================================================== */
+    --action-primary: #A84922;           /* Terracota oscuro (Botón "SELECCIONAR") */
+    --action-primary-hover: #913B18;     /* Terracota oscuro para estado hover */
+    --action-dark: #2A1710;              /* Botón "JUGAR AHORA" */
+    --action-dark-hover: #1A0D08;
+    
+    /* Gradientes de botones */
+    --btn-gradient-primary: linear-gradient(180deg, #B55228 0%, #9E401A 100%);
+
+    /* ========================================================
+        4. BARRAS DE PROGRESO Y ESTADÍSTICAS
+        ======================================================== */
+    --stat-track-bg: #E6D4BE;            /* Fondo contenedor de la barra de nivel */
+    --stat-fill-fuerza: #B65D34;         /* Relleno terracota cálido (Fuerza) */
+    --stat-fill-velocidad: #F8F3EA;      /* Relleno claro / crema (Velocidad) */
+    --stat-fill-defensa: #5C2F1E;        /* Relleno café profundo (Defensa) */
+
+    /* ========================================================
+        5. BORDES Y DELINEADOS
+        ======================================================== */
+    --border-light: rgba(255, 255, 255, 0.65); /* Delineado blanco sutil para glassmorphism */
+    --border-dark: #2B1810;                     /* Borde oscuro del botón "DETALLES" */
+    --border-slider-frame: #FFFFFF;             /* Marco blanco de la ventana del dinosaurio */
+
+    /* Grosores y radios */
+    --border-width-sm: 1px;
+    --border-width-md: 1.5px;
+    --border-width-frame: 4px;                  /* Borde del marco de la foto principal */
+    
+    --radius-sm: 10px;
+    --radius-md: 16px;
+    --radius-lg: 24px;                          /* Esquinas del marco del dinosaurio */
+    --radius-full: 9999px;                      /* Píldoras (botones, tags, navbar) */
+
+    /* ========================================================
+        6. GLASSMORPHISM (Etiquetas flotantes y Chips)
+        ======================================================== */
+    --glass-bg: rgba(255, 255, 255, 0.62);     /* Fondo traslúcido para etiquetas */
+    --glass-bg-dark: rgba(43, 24, 16, 0.65);    /* Chip interno "CLASE: ASALTO" */
+    --glass-blur: blur(14px);                   /* Desenfoque de fondo */
+    --glass-border: 1px solid rgba(255, 255, 255, 0.55);
+
+    /* ========================================================
+        7. SOMBRAS Y RELIEVES (Neumorfismo / Suaves)
+        ======================================================== */
+    --shadow-navbar: 0 10px 25px -5px rgba(100, 70, 50, 0.12), 
+                    0 8px 10px -6px rgba(100, 70, 50, 0.08);
+    --shadow-card: 0 20px 40px -10px rgba(60, 35, 20, 0.22);
+    --shadow-btn: 0 8px 18px -4px rgba(168, 73, 34, 0.35);
+    --shadow-glass: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
 * {
@@ -25,16 +83,46 @@
 }
 
 body {
-    background-color: #f2f2f2;
+    min-height: 100vh;
+    background: url(../assets/img/Referencias/Fondo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+#root {
+    height: 100vh;
 }
 
 .app {
-    width: 100%;
-    min-height: 500vh;
+    height: 100%;
+    display: flex;
+    padding: 25px 0px 10px 0px;
+    flex-direction: column;
 }
 
-.container__main {
+.app-content {
+    flex: 1;
+    min-height: 0;
+    overflow: hidden;
+}
+
+.page-view {
     width: 100%;
-    min-height: 500vh;
-    background-color: var(--backgroundCoffe);
+    height: 100%;
+    display: grid;
+    place-content: center;
+    gap: .5rem;
+    text-align: center;
+    color: var(--text-title);
+    font-family: var(--fontFamilyManrope);
+}
+
+.page-view h1 {
+    font-family: var(--fontFamilyRye);
+    font-size: clamp(2rem, 4vw, 3.5rem);
+}
+
+.page-view p {
+    color: var(--text-body);
 }
