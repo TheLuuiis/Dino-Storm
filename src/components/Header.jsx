@@ -43,7 +43,7 @@ const Header = () => {
                     Tecnologías
                 </NavLink>
             </nav>
-            <span>
+            <span className='header__play'>
                 Jugar ahora
             </span>
         </header>
