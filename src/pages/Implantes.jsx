@@ -1,8 +1,18 @@
+import '../css/pages/Implantes.css';
+
 const Implantes = () => {
     return (
-        <section className="page-view">
-            <h1>Implantes</h1>
-            <p>Contenido de la página de implantes.</p>
+        <section className="container__implantes">
+            <div className="sub__container__implantes">
+                <div className="container__info__implantes">
+                    
+                </div>
+                <div className="container__controller">
+                    <h1>1</h1>
+                    <h1>1</h1>
+                    <h1>1</h1>
+                </div>
+            </div>
         </section>
     );
 }

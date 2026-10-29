@@ -1,0 +1,33 @@
+.container__implantes {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
+    
+}
+
+.sub__container__implantes {
+    width: 1248px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid black;
+}
+
+.container__info__implantes {
+    width: 100%;
+    height: 700px;
+    border: 1px solid black;
+}
+
+.container__controller {
+    width: 100%;
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.2);
+}
