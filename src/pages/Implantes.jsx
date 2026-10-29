@@ -164,7 +164,12 @@ const Implantes = () => {
         <section className="container__implantes">
             <div className="sub__container__implantes">
                 <div className="container__info__implantes">
-                    
+                    <div className="description__implantes">
+
+                    </div>
+                    <div className="container__img__implantes">
+                        
+                    </div>
                 </div>
                 <div className="container__controller">
                     <h1>1</h1>
